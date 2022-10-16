@@ -236,16 +236,17 @@ footer h4{
 }
 
 @media (max-width: 930px){
-
-  body{
-    overflow-x: hidden;
-  }
+  
   .whatsapp{
     z-index: 2;
     display: block;
   }
 
   .top{
+    display: none;
+  }
+
+  .myProjects{
     display: none;
   }
 
