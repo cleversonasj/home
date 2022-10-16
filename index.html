@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio do Cleverson Junior (Front-end Developer)">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -16,115 +17,64 @@
     <title>.: Cleversonasj | Dev :.</title>
   </head>
   <body>
-    <header>
-      <nav>
-        <div class="mobile-menu">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
-        <ul class="nav-list">
-          <li>
-            <a href="mailto:clvsjr@hotmail.com" target="_blank">
-              <i class="fa-solid fa-envelope-open-text"></i>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/cleverson-junior-7749b2b7/"
-              target="_blank"
-            >
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://wa.me/5534992664009" target="_blank">
-              <i class="fa-brands fa-whatsapp"></i>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section>
-        <div class="container">
-          <div class="box_1">
-            <div>
-              <h1>Cleverson Junior</h1>
-            </div>
-            <div>
-              <h5>Front-end Developer</h5>
-            </div>
-            <br>
-            <br>
-            <div class="about">
-              <p>
-                <span class="pink">let</span>
-                sobreMim =
-                <span class="yellow2">{</span>
-                <br>
-                nome
-                <span class="pink">:</span>
-                <span class="yellow">'Cleverson Junior'</span>
-                ,
-                <br>
-                profissao
-                <span class="pink">:</span>
-                <span class="yellow">'Front-end Developer'</span>
-                ,
-                <br>
-                descricao
-                <span class="pink">:</span>
-                <span class="yellow">
-                  'Hello, World! Sou estudante do 4° Período do curso de
-                  Sistemas de Informação. Com foco em me tornar um Desenvolvedor
-                  Full Stack, decidi separar este processo em etapas e escolhi o
-                  Front-end para iniciar. Atualmente tenho conhecimentos de
-                  HTML, CSS, JavaScript e estou estudando React JS. Tenho
-                  certificados dos cursos Programador BR, Udemy e Programming
-                  Hub. Tenho conhecimentos de Algoritmos, Lógica de Programação
-                  e POO (Programação Orientada a Objetos). Na faculdade utilizo
-                  as linguagens: C e Java. Qualquer dúvida estou à disposição,
-                  será um prazer falar com você!'
-                </span>
-                <br>
-                <span class="yellow2">}</span>
-              </p>
-            </div>
-          </div>
-          <div class="box_2">
-            <img
-              class="image_main"
-              src="./images/dev_astronaut.png"
-              alt="Developer"
-            >
-          </div>
-        </div>
-      </section>
-    </main>
-    <section class="projects_section">
-      <div class="my_projects">
-        <h2>Projetos</h2>
-        <p>Aqui você poderá ver alguns projetos que criei.</p>
-        <img src="./images/projetc.jpg" alt="Projetos">
+    <nav id="navigation">
+      <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
       </div>
-      <div class="projects_container carousel">
+      <ul class="nav-list">
+        <li>
+          <a
+          href="mailto:clvsjr@hotmail.com" 
+          target="_blank"><i class="fa-solid fa-envelope-open-text"></i></a>
+        </li>
+        <li>
+          <a
+          href="https://www.linkedin.com/in/cleverson-junior-7749b2b7/"
+          target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        </li>
+        <li>
+          <a
+          href="https://wa.me/5534992664009"
+          target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        </li>
+        <li>
+          <a
+          href="#myProjects"><i class="fa-solid fa-file"></i></a>
+        </li>
+      </ul>
+    </nav>
+    <main class="main-box">
+      <section class="first-box">
+        <h1>Cleverson Junior</h1>
+        <h4>Front-end Developer</h4>
+        <p>Hello, World! Sou estudante de Sistemas de Informação na Universidade Federal de Uberlândia. Sempre achei incrível como um simples arquivo <abbr title="HyperText Markup Language">HTML</abbr> em branco poderia se tornar um arquivo maravilhoso com um pouco de código e por esse motivo escolhi ser um Desenvolvedor Front-end. Atualmente tenho conhecimentos em <abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr>, <abbr title="JavaScript">JS</abbr>, Angular e estou aprendendo React JS.</p>
+        <br>
+        <p>Tenho certificados dos cursos: Programador BR, Udemy, Programming Hub e Gama Academy. Na faculdade concluí as matérias de Algoritmos, Lógica de Programação e POO (Programação Orientada a Objetos), Estrutura de Dados e hoje estou aprendendo Programação Para Internet que é uma matéria 100% prática e Banco de Dados. Além das tecnologias mencionadas acima que utilizo na parte de Front-end, eu tenho conhecimento básico em Linguagem C e Java. Qualquer dúvida estou à disposição, será um prazer falar com você!
+        </p>
+      </section>
+      <div class="second-box">
+        <img
+        src="images/profile.png"
+        alt="Developer"
+        >
+      </div>
+    </main>
+    <hr>
+    <section class="my-projects" id="myProjects">
+      <h2>Projetos</h2>
+      <div class="projects_box carousel">
         <div class="project">
           <a
             href="https://cleversonasj.github.io/donatella_memoryGame/"
             target="_blank"
           >
-            <div class="img__project img_gameDonatella"></div>
-            <div class="project_text">
-              <h2>Sobre</h2>
-              <p>
-                Projeto onde eu utilizei a minha Frenchie como inspiração! É um
-                projeto do Bootcamp da TQI na plataforma da Digital Innovation
-                One Inc.
-              </p>
-              <h2>Tecnologias</h2>
-              <p>HTML, CSS e JavaScript</p>
-            </div>
+          <img src="images/gameDonatella.png" alt="Jogo da Donatella" width="400">
+          <h3>Sobre</h3>
+          <p>Projeto onde eu utilizei a minha Frenchie como inspiração! É um projeto do Bootcamp da TQI na plataforma da Digital Innovation One Inc.</p>
+          <h3>Tecnologias</h3>
+          <p>HTML, CSS e JavaScript</p>
           </a>
         </div>
         <div class="project">
@@ -132,17 +82,15 @@
             href="https://cleversonasj.github.io/clone-netflix/"
             target="_blank"
           >
-            <div class="img__project img_netflixClone"></div>
-            <div class="project_text">
-              <h2>Sobre</h2>
-              <p>
-                Projeto proposto no Bootcamp da DIO, mas com alguns
-                diferenciais. É feito o direcionamento para o YouTube para poder
-                assistir ao trailer do filme escolhido. Página responsiva.
-              </p>
-              <h2>Tecnologias</h2>
-              <p>HTML, CSS, JavaScript e JQuery</p>
-            </div>
+          <img src="images/netflix-clone.png" alt="Clone da Netflix" width="400">
+          <h3>Sobre</h3>
+          <p>
+            Projeto proposto no Bootcamp da DIO, mas com alguns
+            diferenciais. É feito o direcionamento para o YouTube para poder
+            assistir ao trailer do filme escolhido. Página responsiva.
+          </p>
+          <h3>Tecnologias</h3>
+          <p>HTML, CSS, JavaScript e JQuery</p>
           </a>
         </div>
         <div class="project">
@@ -150,32 +98,31 @@
             href="https://cleversonasj.github.io/churrascometro/"
             target="_blank"
           >
-            <div class="img__project img_churrascometro"></div>
-            <div class="project_text">
-              <h2>Sobre</h2>
-              <p>
-                Projeto proposto no curso Programador BR. É um projeto para
-                calcular a quantidade de carnes e bebidas para fazer um
-                churrasco. Página responsiva.
-              </p>
-              <h2>Tecnologias</h2>
-              <p>HTML, CSS e JavaScript</p>
-            </div>
+          <img src="images/churrascometro.png" alt="Churrascometro" width="400">
+          <h3>Sobre</h3>
+          <p>
+            Projeto proposto no curso Programador BR. É um projeto para
+            calcular a quantidade de carnes e bebidas para fazer um
+            churrasco. Página responsiva.
+          </p>
+          <h3>Tecnologias</h3>
+          <p>HTML, CSS e JavaScript</p>
           </a>
         </div>
         <div class="project">
-          <a href="https://cleversonasj.github.io/eventoDoAno/" target="_blank">
-            <div class="img__project img_projetoAno"></div>
-            <div class="project_text">
-              <h2>Sobre</h2>
-              <p>
-                Mais um proposta do curso Programador BR porém assim como o
-                projeto anterior, foi feito diversas modificações no projeto.
-                Página responsiva.
-              </p>
-              <h2>Tecnologias</h2>
-              <p>HTML, CSS e JavaScript</p>
-            </div>
+          <a
+            href="https://cleversonasj.github.io/eventoDoAno/"
+            target="_blank"
+          >
+          <img src="images/eventoAno.png" alt="Evento do Ano" width="400">
+          <h3>Sobre</h3>
+          <p>
+            Mais um proposta do curso Programador BR porém assim como o
+            projeto anterior, foi feito diversas modificações no projeto.
+            Página responsiva.
+          </p>
+          <h3>Tecnologias</h3>
+          <p>HTML, CSS e JavaScript</p>
           </a>
         </div>
         <div class="project">
@@ -183,55 +130,39 @@
             href="https://cleversonasj.github.io/cracha_virtual/"
             target="_blank"
           >
-            <div class="img__project img_crachaVirtual"></div>
-            <div class="project_text">
-              <h2>Sobre</h2>
-              <p>
-                Crachá criado no NLW Heat. Fiz algumas alterações de nos Ícones
-                das Redes Sociais, deixando diferente da proposta. Página
-                responsiva.
-              </p>
-              <h2>Tecnologias</h2>
-              <p>HTML, CSS e JavaScript</p>
-            </div>
+          <img src="images/crachaVirtual.png" alt="Crachá Virtual" width="400">
+          <h3>Sobre</h3>
+          <p>
+            Crachá criado no NLW Heat. Fiz algumas alterações de nos Ícones
+            das Redes Sociais, deixando diferente da proposta. Página
+            responsiva.
+          </p>
+          <h3>Tecnologias</h3>
+          <p>HTML, CSS e JavaScript</p>
           </a>
         </div>
       </div>
     </section>
-    <section>
+    <hr>
+    <section id="techs">
+      <h2>Tecnologias</h2>
+      <p>Essas são as tecnologias que eu utilizo:</p>
       <div class="techs">
-        <div class="tech-header">
-          <h2>Tecnologias</h2>
-          <p>Essas são as tecnologias que eu utilizo:</p>
-        </div>
-
-        <div class="tech-box">
-          <div class="tech html">
-            <img src="./images/html-5.png" alt="HTML">
-          </div>
-
-          <div class="tech html">
-            <img src="./images/css-3.png" alt="CSS">
-          </div>
-
-          <div class="tech html">
-            <img src="./images/js.png" alt="JavaScript">
-          </div>
-
-          <div class="tech html">
-            <img src="./images/jquery-icon.png" alt="JQuery">
-          </div>
-
-          <div class="tech html">
-            <img src="./images/php.png" alt="PHP">
-          </div>
-        </div>
+        <img src="images/html.jpg" alt="HTML" width="100" height="100">
+        <img src="images/css.jpg" alt="CSS" width="100" height="100">
+        <img src="images/js.jpg" alt="JavaScript" width="100" height="100">
+        <img src="images/ts.jpg" alt="TypeScript" width="100" height="100">
+        <img src="images/angular.jpg" alt="Angular" width="100" height="100">
+        <img src="images/react.jpg" alt="React JS" width="100" height="100">
       </div>
     </section>
     <a href="https://wa.me/5534992664009" target="_blank">
-      <img class="whatsapp" src="./images/whatsapp.png" alt="WhatsApp">
+      <img class="whatsapp" src="images/whatsapp.png" alt="WhatsApp Image" width="50" height="50">
     </a>
-
+    <a href="#navigation">
+      <img class="top" src="images/top.png" alt="Top Image" width="50" height="50">
+    </a>
+    <hr>
     <footer>
       <h4>All rights reserved | CASJ 2022</h4>
     </footer>
