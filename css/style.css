@@ -242,11 +242,15 @@ footer h4{
   body{
     overflow-x: hidden;
   }
-  .whatsapp, .top {
+  .whatsapp{
     z-index: 2;
     display: block;
   }
-
+  
+  .top{
+    display: none;
+  }
+  
   .nav-list{
     display: none;
     position: absolute;
@@ -261,8 +265,6 @@ footer h4{
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
   }
-
-
 
   .nav-list.active{
     z-index: 1;
