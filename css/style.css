@@ -101,7 +101,6 @@ hr{
   text-align: justify;
 }
 
-
 .first-box h1{
   font-size: 40px;
   margin-bottom: 3px;
@@ -158,7 +157,6 @@ hr{
   border-radius: 20px 20px 0 0;
   width: 100%;
 }
-
 
 .project:hover{
   box-shadow: 0 5px 14px rgba(251, 247, 247, 0.3), 0 5px 4px rgba(242, 240, 240, 0.22);
@@ -246,11 +244,11 @@ footer h4{
     z-index: 2;
     display: block;
   }
-  
+
   .top{
     display: none;
   }
-  
+
   .nav-list{
     display: none;
     position: absolute;
