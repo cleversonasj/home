@@ -333,6 +333,7 @@ footer h4{
   .project{
     justify-content: center;
     align-items: center;
+    height: 480px;
   }  
 
   .techs{
