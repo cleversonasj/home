@@ -103,6 +103,11 @@ nav{
   margin: 2rem 0 4rem 0;
 }
 
+small {
+  margin-top: 5px;
+  font-weight: bold;
+}
+
 .second-box{
   width: 30%;
   display: flex;
@@ -163,16 +168,18 @@ nav{
   justify-content: center;
 }
 
-.ReposData span{
-  margin: 3px 0;
-  padding: 3px 0;
-  border-radius: 10px;
-}
-
 .ReposData span a{
   text-decoration: none;
   text-align: center;
   color: white
+}
+
+.page, .gitRepository{
+  color: #ffffff;
+  text-decoration: none;
+  padding: 2px 0;
+  margin: 2px 0;
+  border-radius: 3px;
 }
 
 .page{
