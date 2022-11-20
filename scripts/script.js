@@ -41,9 +41,13 @@ const mobileNavbar = new MobileNavbar(
 
 mobileNavbar.init();
 
+
+
 const gitApiProfileUrl = "https://api.github.com/users/cleversonasj";
 
 fetch(gitApiProfileUrl).then(response => response.json()).then((data) => {
+  const metaImg = document.getElementById("metaImg");
+  metaImg.setAttribute("content", `${data.avatar_url}`);
   const profileName = document.getElementById('name');
   const imgProfile = document.querySelector('.second-box');
   profileName.textContent = data.name;
@@ -62,8 +66,8 @@ fetch(gitApiReposUrl).then(response => response.json()).then((repos) => {
       <h3>${repo.name}</h3>
       <p>${repo.description}</p>
       <div class="links">
-        <span class="page"><a href="${repo.homepage}" target="_blank">Acessar a Página</a></span>
-        <span class="gitRepository"><a href="${repo.html_url}" target="_blank">Acessar o Repositório</a></span>
+        <a class="page" href="${repo.homepage}" target="_blank"><span>Acessar a Página</span></a>
+        <a class="gitRepository" href="${repo.html_url}" target="_blank"><span>Acessar o Repositório</span></a>
       </div>
     </div>`
     }else{
@@ -71,7 +75,7 @@ fetch(gitApiReposUrl).then(response => response.json()).then((repos) => {
     `<div class="ReposData">
       <h3>${repo.name}</h3>
       <p>${repo.description}</p>
-      <span class="gitRepository"><a href="${repo.html_url}" target="_blank">Acessar o Repositório</a></span>
+      <a class="gitRepository" href="${repo.html_url}" target="_blank"><span>Acessar o Repositório</span></a>
     </div>`
     }
   }
