@@ -214,7 +214,7 @@ small {
 }
 
 .tech-box2{
-  width: 40%;
+  width: 50%;
   align-self: center;
 }
 
@@ -270,6 +270,10 @@ address{
 footer a{
   color:#ffffff;
   text-decoration: none;
+}
+
+footer a img{
+  margin: 10px 5px;
 }
 
 @media (max-width: 930px){
