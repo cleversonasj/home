@@ -46,8 +46,6 @@ mobileNavbar.init();
 const gitApiProfileUrl = "https://api.github.com/users/cleversonasj";
 
 fetch(gitApiProfileUrl).then(response => response.json()).then((data) => {
-  const metaImg = document.getElementById("metaImg");
-  metaImg.setAttribute("content", `${data.avatar_url}`);
   const profileName = document.getElementById('name');
   const imgProfile = document.querySelector('.second-box');
   profileName.textContent = data.name;
