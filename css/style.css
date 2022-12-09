@@ -144,17 +144,18 @@ small {
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
-  box-shadow: 2px 2px 3px;
-  margin: 10px;
+  margin: 20px;
   padding: 10px;
   border-radius: 10px;
   color: #ffffff;
-  transition: ease .2s;
+  transition: ease .3s;
+  box-shadow: 0 0 10px white;
 }
 
 .ReposData:hover{
   background-color: #ffffff;
   color: #000000;
+  box-shadow: -3px -3px 30px 3px pink, 3px 3px 30px 3px blue;
 }
 
 .ReposData > h3{

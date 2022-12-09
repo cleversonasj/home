@@ -1,3 +1,4 @@
+//Menu Mobile
 class MobileNavbar{
   constructor(mobileMenu, navList, navLinks){
     this.mobileMenu = document.querySelector(mobileMenu);
@@ -43,38 +44,60 @@ mobileNavbar.init();
 
 
 
+const aboutBox = document.querySelector('#about');
+const aboutMe = document.querySelector('.first-box');
+const myGitHubName = document.createElement('h1');
+const occupation = document.querySelector('.first-box > h4')
+const imgProfile = document.querySelector('.second-box');
+const profileIMG = document.createElement('img');
+aboutMe.insertBefore(myGitHubName, occupation);
+imgProfile.appendChild(profileIMG);
+
 const gitApiProfileUrl = "https://api.github.com/users/cleversonasj";
 
 fetch(gitApiProfileUrl).then(response => response.json()).then((data) => {
-  const profileName = document.getElementById('name');
-  const imgProfile = document.querySelector('.second-box');
-  profileName.textContent = data.name;
-  imgProfile.innerHTML += 
-  `<img src="${data.avatar_url}" alt="Foto do ${data.name}" title="Foto do ${data.name}">`
+  myGitHubName.textContent = data.name;
+  profileIMG.setAttribute('src', data.avatar_url);
+  profileIMG.setAttribute('alt', "Foto do " + data.name);
+  profileIMG.setAttribute('title', "Foto do " + data.name);
 });
 
 const gitApiReposUrl = "https://api.github.com/users/cleversonasj/repos"
 
 fetch(gitApiReposUrl).then(response => response.json()).then((repos) => {
-  const projectsBox = document.getElementById('repositories');
+
+  const projectsBox = document.getElementById('repositories'); 
+
   for (repo of repos){
+    const reposData = document.createElement('div');
+    reposData.classList.add('ReposData');
+    const reposDataName = document.createElement('h3');
+    const reposDataDescription = document.createElement('p');
+    const reposDataLinks = document.createElement('div');
+    reposDataLinks.classList.add('links');
+    const reposDataGitRepository = document.createElement('a');
+    const reposDataGitRepositorySpan = document.createElement('span');
+    reposDataGitRepositorySpan.textContent = 'Acessar Repositório';
+    reposDataGitRepository.classList.add('gitRepository');
+    reposDataName.textContent = repo.name;
+    reposDataDescription.textContent = repo.description;
+    reposDataGitRepository.setAttribute('href', repo.html_url);
+    reposDataGitRepository.setAttribute('target', '_blank');
+    reposDataGitRepository.appendChild(reposDataGitRepositorySpan);
+    reposDataLinks.appendChild(reposDataGitRepository);
+    reposData.appendChild(reposDataName);
+    reposData.appendChild(reposDataDescription);
+    reposData.appendChild(reposDataLinks);
+    projectsBox.appendChild(reposData);
     if(repo.homepage){
-      projectsBox.innerHTML += 
-    `<div class="ReposData">
-      <h3>${repo.name}</h3>
-      <p>${repo.description}</p>
-      <div class="links">
-        <a class="page" href="${repo.homepage}" target="_blank"><span>Acessar a Página</span></a>
-        <a class="gitRepository" href="${repo.html_url}" target="_blank"><span>Acessar o Repositório</span></a>
-      </div>
-    </div>`
-    }else{
-      projectsBox.innerHTML += 
-    `<div class="ReposData">
-      <h3>${repo.name}</h3>
-      <p>${repo.description}</p>
-      <a class="gitRepository" href="${repo.html_url}" target="_blank"><span>Acessar o Repositório</span></a>
-    </div>`
+      const reposDataPage = document.createElement('a');
+      reposDataPage.classList.add('page');
+      reposDataPage.setAttribute('href', repo.homepage);
+      reposDataPage.setAttribute('target', '_blank');
+      const reposDataPageSpan = document.createElement('span');
+      reposDataPageSpan.textContent = 'Acessar Página';
+      reposDataPage.appendChild(reposDataPageSpan);
+      reposDataLinks.appendChild(reposDataPage);
     }
   }
 })
