@@ -102,3 +102,32 @@ fetch(gitApiReposUrl).then(response => response.json()).then((repos) => {
   }
 })
 
+window.addEventListener('scroll', function() {
+  var div = document.querySelector('.hidden_left');
+  var position = div.getBoundingClientRect();
+
+  if (position.top < window.innerHeight) {
+    div.style.opacity = 1;
+    div.style.transform = 'translateX(0)';
+  }
+});
+
+window.addEventListener('scroll', function() {
+  var div = document.querySelector('.hidden_right');
+  var position = div.getBoundingClientRect();
+
+  if (position.top < window.innerHeight) {
+    div.style.opacity = 1;
+    div.style.transform = 'translateX(0)';
+  }
+});
+
+window.addEventListener('scroll', function() {
+  var div = document.querySelector('.hidden_footer');
+  var position = div.getBoundingClientRect();
+
+  if (position.top < window.innerHeight) {
+    div.style.opacity = 1;
+    div.style.transform = 'translateX(0)';
+  }
+});
