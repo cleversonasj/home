@@ -27,6 +27,10 @@ nav{
   height: 55px;
 }
 
+main{
+  overflow: hidden;
+}
+
 .nav-list{
   list-style: none;
   display: flex;
@@ -298,15 +302,9 @@ footer a img{
   margin: 10px 5px;
 }
 
-.hidden_left, .hidden_footer {
+.hidden_1, .hidden_2, .hidden_3 {
   opacity: 0;
   transform: translateX(-50px);
-  transition: opacity 2s, transform 2s;
-}
-
-.hidden_right {
-  opacity: 0;
-  transform: translateX(50px);
   transition: opacity 2s, transform 2s;
 }
 
