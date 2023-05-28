@@ -103,7 +103,7 @@ fetch(gitApiReposUrl).then(response => response.json()).then((repos) => {
 })
 
 window.addEventListener('scroll', function() {
-  var div = document.querySelector('.hidden_left');
+  var div = document.querySelector('.hidden_1');
   var position = div.getBoundingClientRect();
 
   if (position.top < window.innerHeight) {
@@ -113,7 +113,7 @@ window.addEventListener('scroll', function() {
 });
 
 window.addEventListener('scroll', function() {
-  var div = document.querySelector('.hidden_right');
+  var div = document.querySelector('.hidden_2');
   var position = div.getBoundingClientRect();
 
   if (position.top < window.innerHeight) {
@@ -123,7 +123,7 @@ window.addEventListener('scroll', function() {
 });
 
 window.addEventListener('scroll', function() {
-  var div = document.querySelector('.hidden_footer');
+  var div = document.querySelector('.hidden_3');
   var position = div.getBoundingClientRect();
 
   if (position.top < window.innerHeight) {
@@ -131,3 +131,4 @@ window.addEventListener('scroll', function() {
     div.style.transform = 'translateX(0)';
   }
 });
+
