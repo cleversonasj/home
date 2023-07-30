@@ -43,20 +43,13 @@ const mobileNavbar = new MobileNavbar(
 mobileNavbar.init();
 
 
-
-const aboutBox = document.querySelector('#about');
-const aboutMe = document.querySelector('.first-box');
-const myGitHubName = document.createElement('h1');
-const occupation = document.querySelector('.first-box > h4')
-const imgProfile = document.querySelector('.second-box');
-const profileIMG = document.createElement('img');
-aboutMe.insertBefore(myGitHubName, occupation);
-imgProfile.appendChild(profileIMG);
-
 const gitApiProfileUrl = "https://api.github.com/users/cleversonasj";
 
+const imgBox = document.querySelector('.second-box');
+const profileIMG = document.createElement('img');
+imgBox.appendChild(profileIMG);
+
 fetch(gitApiProfileUrl).then(response => response.json()).then((data) => {
-  myGitHubName.textContent = data.name;
   profileIMG.setAttribute('src', data.avatar_url);
   profileIMG.setAttribute('alt', "Foto do " + data.name);
   profileIMG.setAttribute('title', "Foto do " + data.name);
@@ -132,3 +125,29 @@ window.addEventListener('scroll', function() {
   }
 });
 
+
+const portuguese = document.getElementById('pt');
+const english = document.getElementById('en');
+const spanish = document.getElementById('es');
+
+const ptBox = document.getElementById('ptBox');
+const enBox = document.getElementById('enBox');
+const esBox = document.getElementById('esBox');
+
+portuguese.addEventListener('click', () => {
+  ptBox.style.display = 'block';
+  enBox.style.display = 'none';
+  esBox.style.display = 'none';
+})
+
+english.addEventListener('click', () => {
+  ptBox.style.display = 'none';
+  enBox.style.display = 'block';
+  esBox.style.display = 'none';
+})
+
+spanish.addEventListener('click', () => {
+  ptBox.style.display = 'none';
+  enBox.style.display = 'none';
+  esBox.style.display = 'block';
+})

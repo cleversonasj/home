@@ -31,6 +31,7 @@ main{
   overflow: hidden;
 }
 
+
 .nav-list{
   list-style: none;
   display: flex;
@@ -75,7 +76,7 @@ main{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   color: #ffffff;
   padding: 0 20px;
 }
@@ -86,9 +87,21 @@ main{
   font-weight: bold;
 }
 
+.languages{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.languages img{
+  margin: 20px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
 .first-box{
-  width: 55%;
-  height: 680px;
+  width: 50%;
+  min-height: 680px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -98,21 +111,33 @@ main{
 }
 
 .first-box h1{
+  text-align: center;
   font-size: 60px;
 }
 
 .first-box h4{
+  text-align: center;
   color: #fae88d;
   font-size: 30px;
   margin-bottom: 20px;
 }
 
-.first-box > p{
+.first-box p{
+  margin: 15px 0;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
   text-indent: 2rem;
-  margin: 5px 0;
 }
+
 .first-box img{
   margin-top: 25px;
+}
+
+.first-box a{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 small {
@@ -306,6 +331,14 @@ footer a img{
   opacity: 0;
   transform: translateX(-50px);
   transition: opacity 2s, transform 2s;
+}
+
+#pt, #es, #en{
+  cursor: pointer;
+}
+
+#enBox, #esBox{
+  display: none;
 }
 
 @media (max-width: 930px){
