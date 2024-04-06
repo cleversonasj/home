@@ -331,6 +331,12 @@ footer a img{
   height: 100vh;
 }
 
+.welcome img{
+  width: 550px;
+  height: 550px;
+  border-radius: 50%;
+}
+
 
 
 @media (max-width: 930px){
