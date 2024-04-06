@@ -180,19 +180,23 @@ small {
   border-radius: 10px;
   color: #ffffff;
   transition: ease .3s;
-  box-shadow: 0 0 10px white;
-}
-
-.ReposData:hover{
-  background-color: #ffffff;
-  color: #000000;
-  box-shadow: -3px -3px 30px 3px pink, 3px 3px 30px 3px blue;
-  transform: perspective(500px) rotateX(10deg);
+  box-shadow: 0 0 3px white;
 }
 
 .ReposData > h3{
   text-transform: uppercase;
   color:#5c5595;
+}
+
+.ReposData:hover{
+  background-color: rgb(250, 250, 250, 0.6);
+  color: #000000;
+  box-shadow: -3px -3px 30px 3px rgb(193, 196, 193);
+  cursor: pointer;
+}
+
+.ReposData:hover h3{
+  color:#a54200;
 }
 
 .links{
@@ -319,6 +323,22 @@ footer a img{
   display: none;
 }
 
+.welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.welcome img{
+  width: 550px;
+  border-radius: 50%;
+}
+
+
+
 @media (max-width: 930px){
   
   .whatsapp{
@@ -436,7 +456,19 @@ footer a img{
     margin: 8px;
   }
 
+  .welcome img{
+    width: 90%;
+  }
+
 }
+
+#ptBox, #enBox, #esBox{
+  background-color: rgba(60, 60, 60, 0.3);
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+
+
 
 @media (max-width: 870px){
   .tech-box div a {
