@@ -2,8 +2,9 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
+
 
 body{
   background: linear-gradient(65deg,  #000000, #212121, #000000);
@@ -106,7 +107,7 @@ main{
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  text-align: justify;
+  text-align: center;
 }
 
 .first-box h1{
@@ -334,6 +335,7 @@ footer a img{
 
 .welcome img{
   width: 550px;
+  height: 550px;
   border-radius: 50%;
 }
 
@@ -405,11 +407,12 @@ footer a img{
     align-items: center;
     margin: 30px 0;
     justify-content: flex-end;
+    padding: 0;
   }
 
   .first-box{
     margin-top: 10px;
-    width: 100%;
+    width: 95%;
   }
 
   .first-box h1{
@@ -457,7 +460,7 @@ footer a img{
   }
 
   .welcome img{
-    width: 90%;
+    width: 95%;
   }
 
 }
