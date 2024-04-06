@@ -107,7 +107,7 @@ main{
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  text-align: center;
+  text-align: justify;
 }
 
 .first-box h1{
@@ -126,7 +126,6 @@ main{
   margin: 15px 0;
   font-size: 1.2rem;
   line-height: 1.5rem;
-  text-indent: 2rem;
 }
 
 .first-box img{
@@ -333,13 +332,6 @@ footer a img{
 }
 
 
-.welcome img{
-  width: 550px;
-  height: 550px;
-  border-radius: 50%;
-}
-
-
 
 @media (max-width: 930px){
   
@@ -478,5 +470,13 @@ footer a img{
     flex: 0 0 calc(20% - 10px);
     color: #ffffff;
     margin: 0;
+  }
+}
+
+@media (max-width: 600px){
+  .welcome img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
   }
 }
