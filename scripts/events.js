@@ -32,37 +32,7 @@ window.addEventListener('scroll', function() {
 
 /* Eventos de manipulação dos boxes de descrição do meu perfil */
 
-async function switchLanguage(languageBoxToShow, languageBoxesToHide) {
-  if (languageBoxToShow.hasClass('active')) {
-    return;
-  }
 
-  await Promise.all(languageBoxesToHide.filter('.active').map(async function() {
-    await $(this).fadeOut(500).promise();
-    $(this).removeClass('active');
-  }));
-
-  languageBoxToShow.fadeIn(500);
-  languageBoxToShow.addClass('active');
-}
-
-$("#pt").click(async function(){
-  $("#pt").removeClass("unselected");
-  $("#en, #es").addClass("unselected");
-  await switchLanguage($("#ptBox"), $("#enBox, #esBox"));
-});
-
-$("#en").click(async function(){
-  $("#en").removeClass("unselected");
-  $("#pt, #es").addClass("unselected");
-  await switchLanguage($("#enBox"), $("#ptBox, #esBox"));
-});
-
-$("#es").click(async function(){
-  $("#es").removeClass("unselected");
-  $("#pt, #en").addClass("unselected");
-  await switchLanguage($("#esBox"), $("#ptBox, #enBox"));
-});
 
 
 $(document).ready(function() {
@@ -82,3 +52,43 @@ $(document).ready(function() {
 });
 
 
+let isTransitioning = false;
+
+async function switchLanguage(languageBoxToShow, languageBoxesToHide) {
+  if (isTransitioning || languageBoxToShow.hasClass('active')) {
+    return;
+  }
+
+  isTransitioning = true;
+
+  await Promise.all(languageBoxesToHide.filter('.active').map(async function() {
+    await $(this).fadeOut(500).promise();
+    $(this).removeClass('active');
+  }));
+
+  languageBoxToShow.fadeIn(500);
+  languageBoxToShow.addClass('active');
+
+  isTransitioning = false;
+}
+
+$("#pt").click(async function(){
+  if (isTransitioning) return;
+  $("#pt").removeClass("unselected");
+  $("#en, #es").addClass("unselected");
+  await switchLanguage($("#ptBox"), $("#enBox, #esBox"));
+});
+
+$("#en").click(async function(){
+  if (isTransitioning) return;
+  $("#en").removeClass("unselected");
+  $("#pt, #es").addClass("unselected");
+  await switchLanguage($("#enBox"), $("#ptBox, #esBox"));
+});
+
+$("#es").click(async function(){
+  if (isTransitioning) return;
+  $("#es").removeClass("unselected");
+  $("#pt, #en").addClass("unselected");
+  await switchLanguage($("#esBox"), $("#ptBox, #enBox"));
+});
