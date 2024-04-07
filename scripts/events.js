@@ -70,7 +70,7 @@ $(document).ready(function() {
       $(this).fadeOut(1000, function() {
         $(bodyChildren).fadeIn(1000);
       });
-    }, 2000);
+    }, 1500);
   });
 });
 
