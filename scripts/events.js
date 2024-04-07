@@ -62,14 +62,14 @@ async function switchLanguage(languageBoxToShow, languageBoxesToHide) {
   isTransitioning = true;
 
   await Promise.all(languageBoxesToHide.filter('.active').map(async function() {
-    await $(this).fadeOut().promise();
+    await $(this).fadeOut(500).promise();
     $(this).removeClass('active');
   }));
 
-  languageBoxToShow.fadeIn();
+  languageBoxToShow.fadeIn(500, function() {
+    isTransitioning = false;
+  });
   languageBoxToShow.addClass('active');
-
-  isTransitioning = false;
 }
 
 $("#pt").click(async function(){
