@@ -32,38 +32,36 @@ window.addEventListener('scroll', function() {
 
 /* Eventos de manipulação dos boxes de descrição do meu perfil */
 
-function switchLanguage(languageBoxToShow, languageBoxesToHide) {
+async function switchLanguage(languageBoxToShow, languageBoxesToHide) {
   if (languageBoxToShow.hasClass('active')) {
     return;
   }
 
-  languageBoxesToHide.filter('.active').fadeOut(500, () => {
-    languageBoxToShow.fadeIn(500);
-  });
+  await Promise.all(languageBoxesToHide.filter('.active').map(async function() {
+    await $(this).fadeOut(500).promise();
+    $(this).removeClass('active');
+  }));
 
+  languageBoxToShow.fadeIn(500);
   languageBoxToShow.addClass('active');
-  languageBoxesToHide.removeClass('active');
 }
 
-$("#pt").click(function(){
+$("#pt").click(async function(){
   $("#pt").removeClass("unselected");
-  $("#en").addClass("unselected");
-  $("#es").addClass("unselected");
-  switchLanguage($("#ptBox"), $("#enBox, #esBox"));
+  $("#en, #es").addClass("unselected");
+  await switchLanguage($("#ptBox"), $("#enBox, #esBox"));
 });
 
-$("#en").click(function(){
+$("#en").click(async function(){
   $("#en").removeClass("unselected");
-  $("#pt").addClass("unselected");
-  $("#es").addClass("unselected");
-  switchLanguage($("#enBox"), $("#ptBox, #esBox"));
+  $("#pt, #es").addClass("unselected");
+  await switchLanguage($("#enBox"), $("#ptBox, #esBox"));
 });
 
-$("#es").click(function(){
+$("#es").click(async function(){
   $("#es").removeClass("unselected");
-  $("#pt").addClass("unselected");
-  $("#en").addClass("unselected");
-  switchLanguage($("#esBox"), $("#ptBox, #enBox"));
+  $("#pt, #en").addClass("unselected");
+  await switchLanguage($("#esBox"), $("#ptBox, #enBox"));
 });
 
 
