@@ -62,11 +62,11 @@ async function switchLanguage(languageBoxToShow, languageBoxesToHide) {
   isTransitioning = true;
 
   await Promise.all(languageBoxesToHide.filter('.active').map(async function() {
-    await $(this).fadeOut(500).promise();
+    await $(this).fadeOut().promise();
     $(this).removeClass('active');
   }));
 
-  languageBoxToShow.fadeIn(500);
+  languageBoxToShow.fadeIn();
   languageBoxToShow.addClass('active');
 
   isTransitioning = false;
