@@ -59,13 +59,13 @@ $("#es").click(function(){
 
 
 $(document).ready(function() {
-  // Ocultar todos os elementos que são filhos do body exceto o primeiro
+  // Elementos que são filhos do body exceto o primeiro
   const bodyChildren = $('body').children().not(':first-child');
   $(bodyChildren).hide();
   
-  // Exibir a mensagem de boas-vindas e, em seguida, fazer os elementos do body aparecerem gradualmente
+  // Exibir o container inicial, em seguida, fazer os elementos do body aparecerem gradualmente
   $(".welcome").appendTo('body').hide().fadeIn(1000, function() {
-    // Manter a mensagem de boas-vindas visível por 3 segundos antes de desaparecer
+    // Manter a mensagem de boas-vindas visível por 1 segundos antes de desaparecer
     setTimeout(() => {
       $(this).fadeOut(1000, function() {
         $(bodyChildren).fadeIn(1000);
