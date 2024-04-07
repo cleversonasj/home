@@ -59,7 +59,7 @@ $("#es").click(function(){
 
 
 $(document).ready(function() {
-  // Ocultar todos os elementos que são filhos do body
+  // Ocultar todos os elementos que são filhos do body exceto o primeiro
   const bodyChildren = $('body').children().not(':first-child');
   $(bodyChildren).hide();
   
@@ -70,7 +70,7 @@ $(document).ready(function() {
       $(this).fadeOut(1000, function() {
         $(bodyChildren).fadeIn(1000);
       });
-    }, 3000);
+    }, 2000);
   });
 });
 
