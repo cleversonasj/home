@@ -37,8 +37,8 @@ function switchLanguage(languageBoxToShow, languageBoxesToHide) {
     return;
   }
 
-  languageBoxesToHide.filter('.active').fadeOut(1000, () => {
-    languageBoxToShow.fadeIn(1000);
+  languageBoxesToHide.filter('.active').fadeOut(500, () => {
+    languageBoxToShow.fadeIn(500);
   });
 
   languageBoxToShow.addClass('active');
