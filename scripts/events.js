@@ -46,14 +46,23 @@ function switchLanguage(languageBoxToShow, languageBoxesToHide) {
 }
 
 $("#pt").click(function(){
+  $("#pt").removeClass("unselected");
+  $("#en").addClass("unselected");
+  $("#es").addClass("unselected");
   switchLanguage($("#ptBox"), $("#enBox, #esBox"));
 });
 
 $("#en").click(function(){
+  $("#en").removeClass("unselected");
+  $("#pt").addClass("unselected");
+  $("#es").addClass("unselected");
   switchLanguage($("#enBox"), $("#ptBox, #esBox"));
 });
 
 $("#es").click(function(){
+  $("#es").removeClass("unselected");
+  $("#pt").addClass("unselected");
+  $("#en").addClass("unselected");
   switchLanguage($("#esBox"), $("#ptBox, #enBox"));
 });
 
